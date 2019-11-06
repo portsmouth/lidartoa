@@ -1,5 +1,8 @@
 # lidartoa
 
+<img src="./renders/bristol-lidar.png" width="300"/></a><img src="./renders/london-lidar.png" width="300"/></a>
+<img src="./renders/manchester-lidar.png" width="300"/></a><img src="./renders/lidar-manchester-gpu.png" width="300"/></a>
+
 This script converts .asc files containing DTM/DSM raster maps into an Arnold .ass file and companion EXR files, for displacement map rendering.
 
 The script is currently setup to parse .asc files specifically downloaded from https://data.gov.uk/dataset/80c522cc-e0bf-4466-8409-57a04c456197/lidar-composite-dsm-1m (click on "Survey_Download" to launch a web tool for selecting a map region and downloading tiles).

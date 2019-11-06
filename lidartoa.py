@@ -24,7 +24,6 @@ options
     GI_total_depth 10
     GI_diffuse_samples 4
     GI_specular_samples 2
-    background my_sky
 }
 
 gaussian_filter
@@ -76,37 +75,37 @@ ramp_rgb
 {
     name color_ramp
     input state_h
-    color 6 1 RGB 1.0 1.0 1.0 0.8 1.0 1.0 0.6275 1.0 0.912 1.0 1.0 0.5 1.0 0.3664 0.1 0.9 0.1 0.1
+    color 6 1 RGB 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 0.6 0.5 1.0 0.2 0.2 1.0 0.1 0.1
     interpolation 6 1 INT 2 2 2 2 2 2
-    position 6 1 FLOAT 0.0 0.01 0.02 0.03 0.04 0.50 #0.20 0.16 0.12 0.08 0.04 0.0
+    position 6 1 FLOAT 0.0 0.02 0.04 0.06 0.08 0.10 #0.20 0.16 0.12 0.08 0.04 0.0
 }
 
 standard_surface
 {
     name ss_shader
-    base 0.25
-    base_color 0.8 0.8 0.8 #color_ramp
+    base 1.0
+    base_color color_ramp
     emission 0.0
     emission_color 0 0 0
     specular 1.0
     specular_color 1 1 1
-    specular_IOR 1.6
-    specular_roughness 0.17
-    metalness 0.65
+    specular_IOR 1.5
+    specular_roughness  0.05
+    metalness 0.0
 }
 
 standard_surface
 {
     name bg_shader
     base 1.0
-    base_color 0.65 0.75 0.9
+    base_color color_ramp
     emission 0.0
     emission_color 0 0 0
     specular 1.0
-    specular_color 0.9 0.95 1
+    specular_color 1 1 1
     specular_IOR 1.5
-    specular_roughness 0.2
-    metalness 0.5
+    specular_roughness  0.05
+    metalness 0.0
 }
 '''
 
@@ -135,7 +134,7 @@ polymesh
     disp_padding {disp_padding}
     disp_height {disp_height}
     disp_zero_value 0.0
-    disp_autobump on
+    disp_autobump off
     smoothing on
     subdiv_type catclark
     subdiv_adaptive_error 0.01
