@@ -27,3 +27,5 @@ optional arguments:
   --scale [SCALE], -s [SCALE]
                         (default is 1.0)
 ```
+
+Provide the path of either a directory containing .asc files (files in sub-directories will also be found), or an individual .asc file. 
