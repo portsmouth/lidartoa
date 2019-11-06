@@ -1,6 +1,6 @@
 # lidartoa
 
-This script converts .asc files containing DTM/DSM maps into an Arnold .ass file and companion EXR files, for displacement map rendering.
+This script converts .asc files containing DTM/DSM raster maps into an Arnold .ass file and companion EXR files, for displacement map rendering.
 
 The script is currently setup to parse .asc files specifically downloaded from https://data.gov.uk/dataset/80c522cc-e0bf-4466-8409-57a04c456197/lidar-composite-dsm-1m.
 
